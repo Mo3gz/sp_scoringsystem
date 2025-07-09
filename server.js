@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB Atlas connection URI
-const uri = "mongodb+srv://sigmanup:J2rydPN0WPGSjpvL@aymanmo3.mtjtf.mongodb.net/?retryWrites=true&w=majority&appName=Aymanmo3";
+const uri = "mongodb+srv://sigmanup:JkR8fuT3Gc5l49OS@scoringsystem.3xihn42.mongodb.net/?retryWrites=true&w=majority&appName=Scoringsystem";
 const DATABASE_NAME = 'scoreboard';
 const COLLECTION_NAME = 'scores';
 

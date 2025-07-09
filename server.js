@@ -7,16 +7,12 @@ const port = process.env.PORT || 3000;
 
 // Team names mapping
 const teamNames = {
-  1: 'Sofia',
-  2: 'John',
-  3: 'Sarah',
-  4: 'Mike',
-  5: 'a',
-  6: 'b',
-  7: 'c',
-  8: 'd',
-  9: 'e',
-  10: 'f'
+  1: 'Team 1',
+  2: 'Team 2',
+  3: 'Team 3',
+  4: 'Team 4',
+  5: 'Team 5',
+  6: 'Team 6'
 };
 
 // Middleware to parse JSON bodies

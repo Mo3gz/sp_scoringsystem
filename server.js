@@ -3,7 +3,7 @@ const { MongoClient, ServerApiVersion } = require('mongodb');
 const path = require('path');
 const cors = require('cors'); // CORS support for development
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 // Team names mapping
 const teamNames = {
@@ -121,7 +121,7 @@ app.put('/api/scores/:teamNumber', async (req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Start the server and connect to MongoDB
-app.listen(port, async () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(port, '0.0.0.0', async () => {
+  console.log(`Server is running on http://0.0.0.0:${port}`);
   await connectToDatabase();
 });

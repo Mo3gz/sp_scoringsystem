@@ -58,7 +58,7 @@ async function initDatabase() {
   try {
     const count = await collection.countDocuments();
     if (count === 0) {
-      const teamData = Array.from({ length: 10 }, (_, i) => ({
+      const teamData = Array.from({ length: 6 }, (_, i) => ({
         teamNumber: i + 1,
         score: 0
       }));
@@ -91,7 +91,7 @@ app.put('/api/scores/:teamNumber', async (req, res) => {
   const teamNumber = parseInt(req.params.teamNumber);
   const newScore = req.body.score;
 
-  if (isNaN(newScore) || teamNumber < 1 || teamNumber > 10) {
+  if (isNaN(newScore) || teamNumber < 1 || teamNumber > 6) {
     return res.status(400).json({ message: 'Invalid team number or score.' });
   }
 

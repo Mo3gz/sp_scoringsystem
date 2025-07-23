@@ -116,6 +116,11 @@ app.put('/api/scores/:teamNumber', async (req, res) => {
 // Serve static files (public directory) for frontend
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve index.html for the root route
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // Start the server and connect to MongoDB
 app.listen(port, '0.0.0.0', async () => {
   console.log(`Server is running on http://0.0.0.0:${port}`);
